@@ -152,7 +152,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 12px;
@@ -188,12 +188,6 @@
             color: var(--crimson);
             margin-bottom: 2rem;
             text-align: center;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
         }
 
         p {
@@ -241,7 +235,7 @@
             top: -0.5rem;
         }
 
-        /* Footer / Contact Section */
+        /* Contact Section */
         .contact-section {
             background: var(--light-gray);
             padding: 5rem 0;
@@ -363,12 +357,10 @@
             }
         }
 
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Fade in animation */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -412,26 +404,26 @@
             </div>
         </div>
 
-        <!-- Hero Section with Phone Mockups -->
+        <!-- Hero Section -->
         <section class="hero-section" id="overview">
-            <img src="hero_phones.png" alt="Airbnb Quick Compare feature on mobile devices" class="hero-image">
-            
-            <!-- Video Section -->
-            <div class="video-section">
-                <h2 style="margin-bottom: 1.5rem;">How Three Friends Book a Stay in 60 Seconds - Watch Video</h2>
-                <div class="video-container">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        src="https://www.youtube.com/embed/VzE-fixhd-E" 
-                        title="Airbnb Quick Compare Walkthrough" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
+            <img src="hero_phones.png" alt="Airbnb Quick Compare on mobile devices" class="hero-image">
         </section>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <h2 style="margin-bottom: 1.5rem;">How Three Friends Book a Stay in 60 Seconds</h2>
+            <div class="video-container">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/VzE-fixhd-E" 
+                    title="Airbnb Quick Compare Walkthrough" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
         <!-- Opening Quote -->
         <section class="content-wrapper">
@@ -467,23 +459,23 @@
             </p>
         </section>
 
-        <!-- Compare Screens -->
+        <!-- Compare Interface -->
         <section class="content-wrapper">
             <h2>Designing for Clarity So Groups Can Decide Faster and Book Confidently</h2>
-            <img src="compare_screens.png" alt="Quick Compare interface screens" class="section-image">
+            <img src="compare_screens.png" alt="Quick Compare interface" class="section-image">
         </section>
 
         <!-- User Journeys -->
         <section class="content-wrapper">
-            <img src="charles_journey.png" alt="User journey - Charles reviewing stays" class="section-image">
+            <img src="charles_journey.png" alt="User journey" class="section-image">
             <img src="charles_journey2.png" alt="User journey continued" class="section-image">
         </section>
 
-        <!-- How I Arrived at the Solution -->
+        <!-- Solution Process -->
         <section class="content-wrapper" id="solution">
-            <h2>How I Arrived at the Solution: The Decisions That Changed My Direction</h2>
-            <img src="decisions.png" alt="Decision 1: Reframing the problem" class="section-image">
-            <img src="decisions2.png" alt="Comparison vs Pricing clarity" class="section-image">
+            <h2>How I Arrived at the Solution</h2>
+            <img src="decisions.png" alt="Design decisions" class="section-image">
+            <img src="decisions2.png" alt="Design decisions continued" class="section-image">
         </section>
 
         <!-- Competitor Analysis -->
@@ -491,31 +483,31 @@
             <img src="competitor.png" alt="Competitor analysis" class="section-image">
         </section>
 
-        <!-- Compare as Core Experience -->
+        <!-- Core Experience -->
         <section class="content-wrapper">
-            <img src="compare_core.png" alt="Making Compare the core experience" class="section-image">
+            <img src="compare_core.png" alt="Compare as core experience" class="section-image">
         </section>
 
-        <!-- Beyond the Happy Path -->
+        <!-- Beyond Happy Path -->
         <section class="content-wrapper">
             <h2>What Happens Beyond the Happy Path?</h2>
-            <img src="beyond_happy.png" alt="Beyond the happy path scenarios" class="section-image">
+            <img src="beyond_happy.png" alt="Edge cases and scenarios" class="section-image">
         </section>
 
         <!-- Experiences -->
         <section class="content-wrapper">
-            <img src="experiences.png" alt="Nearby experiences feature" class="section-image">
+            <img src="experiences.png" alt="Nearby experiences" class="section-image">
         </section>
 
         <!-- Design System -->
         <section class="content-wrapper" id="design">
             <h2>Behind the Design: Building a Scalable UI System</h2>
-            <img src="design_system.png" alt="Design system and components" class="section-image">
+            <img src="design_system.png" alt="Design system" class="section-image">
         </section>
 
         <!-- Closing -->
         <section class="content-wrapper">
-            <img src="closing.png" alt="Project context and research" class="section-image">
+            <img src="closing.png" alt="Project context" class="section-image">
             
             <div style="text-align: center; margin: 3rem 0;">
                 <p style="color: var(--green); font-size: 1.2rem; font-weight: 600;">
@@ -527,7 +519,7 @@
                     To learn more about this UX work, check out the detailed article and walkthrough:
                 </p>
                 <div style="margin-top: 1.5rem;">
-                    <a href="https://www.youtube.com/watch?v=VzE-fixhd-E&list=PLquEzdETOoNyYXiZ_45GgPYmy8DfAgBGb&index=6" target="_blank" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">YouTube Walkthrough</a>
+                    <a href="https://www.youtube.com/watch?v=VzE-fixhd-E" target="_blank" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">YouTube Walkthrough</a>
                     <span style="color: var(--gray);">|</span>
                     <a href="#" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">Medium Article</a>
                     <span style="color: var(--gray);">|</span>
@@ -536,7 +528,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section class="contact-section" id="contact">
             <div class="contact-content">
                 <img src="headshot_kavi.png" alt="Kavitha Sankaran" class="profile-photo">
@@ -558,22 +550,19 @@
     </div>
 
     <script>
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const offsetTop = target.offsetTop - 80;
                     window.scrollTo({
-                        top: offsetTop,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Add active state to nav on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             const scrollY = window.pageYOffset;
