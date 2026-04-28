@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavitha Sankaran - Product Designer | Airbnb Quick Compare Case Study</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --crimson: #E31C5F;
+            --green: #008A05;
+            --black: #222222;
+            --gray: #717171;
+            --light-pink: #FFF0F0;
+            --light-gray: #F7F7F7;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background: white;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--black);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--crimson);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .content-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-top: 80px;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .case-study-label {
+            font-size: 0.95rem;
+            color: var(--crimson);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .header-section .subtitle {
+            font-size: 1.4rem;
+            color: var(--crimson);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .header-meta span strong {
+            color: var(--black);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        /* Video Section */
+        .video-section {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            color: var(--crimson);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--light-pink);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.15rem;
+            color: var(--black);
+            line-height: 1.8;
+        }
+
+        .highlight-green {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--black);
+            padding: 2rem 4rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--crimson);
+            position: absolute;
+            left: 1rem;
+            top: -0.5rem;
+        }
+
+        /* Grid Layouts */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        /* Footer / Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: block;
+            border: 4px solid white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h2 {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-section .role {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .status {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .status .highlight-green {
+            font-weight: 600;
+        }
+
+        .contact-section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 138, 5, 0.3);
+        }
+
+        .contact-links {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        .contact-links a {
+            color: var(--black);
+            text-decoration: underline;
+            margin: 0 1rem;
+        }
+
+        .contact-links a:hover {
+            color: var(--crimson);
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            color: var(--crimson);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .header-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-section .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .header-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .content-wrapper {
+                padding: 0 1.5rem;
+            }
+
+            .two-column,
+            .three-column {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .quote {
+                padding: 2rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Kavitha Sankaran</div>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section content-wrapper">
+            <div class="case-study-label">A Product Design Case Study</div>
+            <h1>Airbnb Quick Compare</h1>
+            <p class="subtitle">Accelerating group travel decisions to improve booking conversion</p>
+            <div class="header-meta">
+                <span><strong>Kavitha Sankaran</strong> · Product Designer</span>
+                <span>Duration: <strong>8 weeks (Feb 2026)</strong></span>
+            </div>
+        </div>
+
+        <!-- Hero Section with Phone Mockups -->
+        <section class="hero-section" id="overview">
+            <img src="images/sections/hero_phones.png" alt="Airbnb Quick Compare feature on mobile devices" class="hero-image">
+            
+            <!-- Video Section -->
+            <div class="video-section">
+                <h2 style="margin-bottom: 1.5rem;">How Three Friends Book a Stay in 60 Seconds - Watch Video</h2>
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/VzE-fixhd-E" 
+                        title="Airbnb Quick Compare Walkthrough" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opening Quote -->
+        <section class="content-wrapper">
+            <div class="quote">
+                Planning a trip with friends sounds exciting until it comes to choosing where to stay.
+            </div>
+            <img src="images/sections/quote_intro.png" alt="Problem statement introduction" class="section-image">
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="content-wrapper" id="problem">
+            <div class="highlight-box">
+                <p>
+                    While Airbnb allows users to save homes, it lacks a structured way to compare shortlisted options. 
+                    This leads to <strong>cognitive overload, delayed group alignment, and missed booking opportunities.</strong>
+                </p>
+                <p>
+                    To solve this, I introduced <span class="highlight-green">Quick Compare</span> - a feature that transforms 
+                    the Wishlist into a decision-making layer, enabling users to view stays side by side, align faster with 
+                    their group, and book with confidence.
+                </p>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem;">
+                This case study explores an <strong>8-week solo UX concept project</strong>, completed as part of the 
+                <strong>UX Gym Ignite program</strong>, where I redesigned the <span class="highlight-green">Airbnb Wishlist experience</span> 
+                to address this exact problem.
+            </p>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic;">
+                This project reflects a user-centered approach to reducing decision friction and designing for real-world 
+                group behavior in travel planning, and was recognized with a 
+                <span class="highlight-green">Strategic Product Thinking Award and an Overall Best Performer Award.</span>
+            </p>
+        </section>
+
+        <!-- Why Group Trips Break Down -->
+        <section class="content-wrapper">
+            <h2>Why Group Trips Break Down Before the Booking Stage</h2>
+            <img src="images/sections/user_scenario.png" alt="User scenario - Marla's story" class="section-image">
+        </section>
+
+        <!-- Designing for Clarity -->
+        <section class="content-wrapper">
+            <h2>Designing for Clarity So Groups Can Decide Faster and Book Confidently</h2>
+            <img src="images/sections/user_goal1.png" alt="User Goal 1: Share wishlist" class="section-image">
+            <img src="images/sections/compare_screens.png" alt="Quick Compare interface screens" class="section-image">
+        </section>
+
+        <!-- User Goal 2 -->
+        <section class="content-wrapper">
+            <img src="images/sections/user_goal2.png" alt="User Goal 2: Review and vote" class="section-image">
+            <img src="images/sections/charles_journey.png" alt="Charles reviewing stays" class="section-image">
+            <img src="images/sections/charles_journey2.png" alt="Charles journey continued" class="section-image">
+        </section>
+
+        <!-- User Goal 3 -->
+        <section class="content-wrapper">
+            <img src="images/sections/marla_return.png" alt="User Goal 3: Group alignment" class="section-image">
+            <img src="images/sections/marla_reserve.png" alt="Marla reserves the stay" class="section-image">
+        </section>
+
+        <!-- How I Arrived at the Solution -->
+        <section class="content-wrapper" id="solution">
+            <h2>How I Arrived at the Solution: The Decisions That Changed My Direction</h2>
+            <img src="images/sections/decisions.png" alt="Decision 1: Reframing the problem" class="section-image">
+            <img src="images/sections/decisions2.png" alt="Comparison vs Pricing clarity" class="section-image">
+        </section>
+
+        <!-- Why Quick Compare Lives in Wishlist -->
+        <section class="content-wrapper">
+            <img src="images/sections/competitor.png" alt="Competitor analysis" class="section-image">
+        </section>
+
+        <!-- Voting vs Messaging -->
+        <section class="content-wrapper" id="process">
+            <img src="images/sections/voting.png" alt="Why lightweight emoji voting" class="section-image">
+            <img src="images/sections/voting2.png" alt="Voting solution details" class="section-image">
+        </section>
+
+        <!-- Compare as Core Experience -->
+        <section class="content-wrapper">
+            <img src="images/sections/compare_core.png" alt="Making Compare the core experience" class="section-image">
+        </section>
+
+        <!-- Beyond the Happy Path -->
+        <section class="content-wrapper">
+            <h2>What Happens Beyond the Happy Path?</h2>
+            <img src="images/sections/beyond_happy.png" alt="User Story 1: Price breakdown" class="section-image">
+            <img src="images/sections/price_breakdown.png" alt="Price breakdown during comparison" class="section-image">
+        </section>
+
+        <!-- User Stories 2 & 3 -->
+        <section class="content-wrapper">
+            <img src="images/sections/experiences.png" alt="User Story 2: Nearby experiences" class="section-image">
+            <img src="images/sections/services.png" alt="User Story 3: Services" class="section-image">
+        </section>
+
+        <!-- Design System -->
+        <section class="content-wrapper" id="design">
+            <h2>Behind the Design: Building a Scalable UI System</h2>
+            <img src="images/sections/design_system.png" alt="Design system and components" class="section-image">
+        </section>
+
+        <!-- What's Next -->
+        <section class="content-wrapper">
+            <h2>What's Next in Quick Compare?</h2>
+            <img src="images/sections/whats_next.png" alt="Future features roadmap" class="section-image">
+        </section>
+
+        <!-- Closing -->
+        <section class="content-wrapper">
+            <img src="images/sections/closing.png" alt="Project context and research" class="section-image">
+            
+            <div style="text-align: center; margin: 3rem 0;">
+                <p style="color: var(--green); font-size: 1.2rem; font-weight: 600;">
+                    A special thanks to my mentor, peers and friends who supported me throughout this journey - 
+                    your feedback, discussions, and perspectives played a key role in shaping this project.
+                    <br>You know who you are 😊
+                </p>
+                <p style="margin-top: 2rem; color: var(--crimson); font-size: 1.15rem;">
+                    To learn more about this UX work, check out the detailed article and walkthrough:
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.youtube.com/watch?v=VzE-fixhd-E&list=PLquEzdETOoNyYXiZ_45GgPYmy8DfAgBGb&index=6" target="_blank" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">YouTube Walkthrough</a>
+                    <span style="color: var(--gray);">|</span>
+                    <a href="#" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">Medium Article</a>
+                    <span style="color: var(--gray);">|</span>
+                    <a href="#" style="color: var(--black); text-decoration: underline; margin: 0 1rem; font-size: 1.1rem;">LinkedIn Post</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-content">
+                <img src="images/headshot_kavi.png" alt="Kavitha Sankaran" class="profile-photo">
+                <h2>Kavitha Sankaran</h2>
+                <p class="role">-Product Designer</p>
+                <p class="status">
+                    <span class="highlight-green">Open to roles</span> where strategy meets design
+                </p>
+                <h3>Want to talk with Me!</h3>
+                <a href="mailto:kavisankaran.bsn@gmail.com" class="cta-button">Reach out</a>
+                <div class="contact-links">
+                    <a href="mailto:kavisankaran.bsn@gmail.com">kavisankaran.bsn@gmail.com</a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/kavisankarcse/" target="_blank">linkedin.com/in/kavisankarcse/</a>
+                </div>
+                <p class="footer-note">Will meet you in the next Journey....😊</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active state to nav on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    if (navLink) {
+                        document.querySelectorAll('nav a').forEach(a => a.style.color = 'var(--gray)');
+                        navLink.style.color = 'var(--crimson)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
